@@ -83,5 +83,13 @@ The `HomeComponent` located in the `src/app/components/home` directory demonstra
 
 The `GreetingService` located in the `src/app/services/greeting` directory is a simple service that provides the greeting message.
 
+
+## Flow-Feature Module factory
+In the nx-injection-token-example library, the BRIDGE token serves as a means of communication between the library and the consuming application. If the application wishes to provide an alternative implementation of a service within the library, it can use the BRIDGE_APP injection token to define the service.
+
+To accomplish this, a factory function is used. The factory function checks if there is a custom implementation provided for the BRIDGE_APP token. If a custom implementation is available, it is used. Otherwise, the default implementation specified for the BRIDGE token, which is used throughout the library, is utilized.
+
+By utilizing the BRIDGE and BRIDGE_APP injection tokens in this manner, the library allows flexibility for the application to provide its own services while also providing a fallback mechanism to ensure consistent functionality when a custom implementation is not available.
+
 ## Conclusion
 `nx-injection-token-example` provides a minimal example of how to use custom injection tokens for dependency injection in an Nx monorepo. You can explore the code and modify it to fit your needs, learning how to leverage injection tokens to decouple components and services in your Angular applications.
