@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@example/flow/api": ["libs/flow/api/src/index.ts"],
-      "@example/flow/feature": ["libs/flow/feature/src/index.ts"]
+      "@example/flow/feature": ["libs/flow/feature/src/index.ts"],
+      "@example/flow/ui": ["libs/flow/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
